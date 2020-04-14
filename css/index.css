@@ -104,6 +104,19 @@ nav,
 section {
   display: block;
 }
+@media (max-width:550px) {
+  html body p {
+    font-size: 1rem;
+  }
+  html body .Bot-Content {
+    padding: 2% 4% 15% 2%;
+  }
+}
+@media (max-width:800px) {
+  html body p {
+    font-size: 1.25rem;
+  }
+}
 body {
   line-height: 1;
   display: flex;
@@ -116,7 +129,7 @@ body border:4px header {
   background-color: blue;
 }
 body .Top-Content {
-  width: 60%;
+  width: 75%;
   margin: 2%;
   padding: 2% 2%;
   display: flex;
@@ -137,7 +150,7 @@ body .Mid-Content p {
 body .Bot-Content {
   align-items: center;
   margin: 2%;
-  padding: 2% 2%;
+  padding: 2% 4% 8% 4%;
   background-color: whitesmoke;
   width: 80%;
   height: 10vh;
@@ -173,12 +186,19 @@ ul {
   display: flex;
   justify-content: space-evenly;
   font-size: 2rem;
+  color: darkslategray;
 }
 ol li,
 ul li {
   display: inline;
   margin: 2%;
   padding: 2% 0;
+  background-color: whitesmoke;
+  border: 2px solid darkslategray;
+}
+ol li:hover,
+ul li:hover {
+  background-color: lightslategray;
 }
 blockquote,
 q {
