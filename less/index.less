@@ -29,6 +29,16 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+@main-color:darkslategray;
+@accent-color:whitesmoke;
+@phone:~"(max-width:550px)";
+@tablet:~"(max-width:800px)";
+.flexing(@display, @justify,@align:center){
+display:@display;
+justify-content:@justify;
+align-content:@align;
+}
+
 body {
 	line-height: 1;
 	display:flex;
@@ -40,15 +50,17 @@ body {
 		margin:2%;
 		padding: 5px 0px;
 		background-color:blue;
-		nav ul li{
-			display:inline;
-		}
+		
 	
 	}
 	.Top-Content{
+		width:60%;
 		margin:2%;
-		background-color:beige;
-		color:slategray;
+		padding:2% 2%;
+		.flexing(flex,center,center);
+		background-color:@accent-color;
+		color:@main-color;
+		
 	}
 	.Mid-Content{
 		display:flex;
@@ -61,13 +73,22 @@ body {
 	}
 	.Bot-Content{
 		align-items:center;
-
+		margin:2%;
+		padding:2% 2%;
+		background-color:@accent-color;
+		width:80%;
+		height:10vh;
+		text-align:center;
+		border:4px solid @main-color;;
 	}
 	footer{
 		font-size:1.4rem;
+		margin:1%;
+		padding:2% 0;
 	}
 	h1{
 		font-size:3rem;
+		
 	}
 	h2, h3{
 		font-size:2.25rem;
@@ -78,9 +99,21 @@ body {
 	p{
 		font-size:1.5rem;
 	}
+	span{
+		margin:auto;
+		padding:0%, 10%,0%,0%
+	}
 }
 ol, ul {
 	list-style: none;
+	display:flex;
+	justify-content:space-evenly;
+	font-size:2rem;
+	li{
+	display:inline;
+	margin:2%;
+	padding:2% 0;
+	}
 }
 blockquote, q {
 	quotes: none;
